@@ -1,0 +1,33 @@
+<!-- <div class="container">
+    <h1>Login!</h1>
+    <div *ngIf="invalidLogin" class="alert alert-warning">{{errorMessage}}</div>
+    <div>
+        Username : <input type="text" name="username" id="uname" [(ngModel)]="username">
+        Password : <input type="password" name="password" id="upass" [(ngModel)]="password">
+
+        <button class="btn btn-success" (click)=handleLogin()>Login</button>
+    </div>
+</div> -->
+<div class="container">
+    <div class="login-form box">
+        <span class="login-form-header">
+            <h4>Log in to Your Account</h4>
+        </span>
+        <div class="login-form-icon"><img src="../../assets/user.png" alt=""></div>
+        <form>
+            <div class="login-form-input">
+                <div *ngIf="invalidLogin" class="alert alert-warning login-form-alert">{{errorMessage}}</div>
+                <div class="form-group">
+                    <label class="form-control-placeholder" for="uname">Username</label>
+                    <input type="email" class="form-control" id="uname" name="username" [(ngModel)]="username">
+                </div>
+                <div class="form-group">
+                    <label class="form-control-placeholder" for="upass">Password</label>
+                    <input type="password" class="form-control" id="upass" name="password" [(ngModel)]="password">
+                </div>
+            </div>
+            <div class="login-button"><button type="button" class="btn btn-primary"
+                    (click)="handleBasicAuthLogin()">Login</button></div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+    <div>
+        <h1>Welcome!</h1>
+        <span>Hi {{name}}, Welcome to your ToDo App!</span>
+        <div><a routerLink="/todos">Go to your todos</a></div>
+    </div>
+    <br>
+    <div>
+        <span>Click the button to get message from REST Web Service</span>
+        <div><button (click)="getWelcomeMessageWithPath()" class="btn btn-success">Get Message</button></div>
+        <br>
+        <div *ngIf="welcomeMessage" class="alert alert-primary">
+            {{welcomeMessage}}
+        </div>
+    </div>
+</div>

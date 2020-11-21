@@ -1,0 +1,13 @@
+.container {
+    margin-top: 55px;
+}
+
+.delete, .update, .add {
+    width: 10%;
+}
+
+img {
+    width: 35%;
+    display: block;
+    margin: auto;
+}

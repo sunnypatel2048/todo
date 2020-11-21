@@ -1,0 +1,29 @@
+<div class="container">
+    <h3> My Todos </h3>
+    <div class="alert alert-success" *ngIf='message'>{{message}}</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+                <th>Target Date</th>
+                <th>Status</th>
+                <th></th>
+                <!-- <th><button (click)="addTodo()" class="btn btn-success">Add</button></th> -->
+                <th class="add"><img src="../../assets/add.png" alt="Add" title="Add" (click)="addTodo()"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let todo of todos">
+                <td>{{todo.id}}</td>
+                <td>{{todo.description}}</td>
+                <td>{{todo.targetDate | date}}</td>
+                <td>{{todo.done ? "Complete" : "Incomplete"}}</td>
+                <!-- <td><button (click)="updateTodo(todo.id)" class="btn btn-warning">Update</button></td> -->
+                <!-- <td><button (click)="deleteTodo(todo.id)" class="btn btn-danger">Delete</button></td> -->
+                <td class="update"><img src="../../assets/update.png" alt="Update" data-toggle="tooltip" data-placement="top" title="Update" (click)="updateTodo(todo.id)"></td>
+                <td class="delete"><img src="../../assets/delete.png" alt="Delete" title="Delete" (click)="deleteTodo(todo.id)"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
